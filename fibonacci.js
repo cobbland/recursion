@@ -11,15 +11,14 @@ function fibs(times) {
     return fibsReturn;
 }
 
-function fibsRec(times, [firstNum, nextNum] = [0, 1]) {
+function fibsRec(times, firstNum = 0, nextNum = 1) {
     if (times <= 0) {
         return [];
     }
     let fibReturn = [firstNum];
     return fibReturn.concat(
-        fibsRec(
-        times - 1, 
-        [firstNum, nextNum] = [nextNum, firstNum + nextNum]
-        )
+        fibsRec(times - 1, nextNum, firstNum + nextNum)
     );
 }
+
+console.log(fibsRec(100));
