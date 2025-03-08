@@ -22,8 +22,4 @@ function fibsRec(times, [firstNum, nextNum] = [0, 1]) {
         [firstNum, nextNum] = [nextNum, firstNum + nextNum]
         )
     );
-    
 }
-
-console.log(fibs(7));
-console.log(fibsRec(7)); // [0, 1, 1, 2, 3, 5, 8]
