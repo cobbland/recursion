@@ -2,8 +2,9 @@ function mergeSort(arr) {
     if (arr.length === 1) {
         return arr;
     }
-    const arrLeft = mergeSort(arr.slice(0, arr.length / 2));
-    const arrRight = mergeSort(arr.slice(arr.length / 2));
+    const mid = Math.floor(arr.length / 2);
+    const arrLeft = mergeSort(arr.slice(0, mid));
+    const arrRight = mergeSort(arr.slice(mid));
     const sortedArr = [];
     let indexLeft = 0;
     let indexRight = 0;
